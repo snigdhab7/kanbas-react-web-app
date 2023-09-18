@@ -1,0 +1,78 @@
+<form>
+    <select>
+        <option>Speed Grader</option>
+        <option>Edit</option>
+    </select>
+    <hr />
+    <h3><label for="assignmnetName">Assignmnet Name</label></h3>
+    <input id="assignmnetName" value="A1 -ENV + HTML" type="text" placeholder="Assignmnet Name" />
+    <br /><br />
+    <textarea cols="50" rows="5">
+    This is the assignment description.
+</textarea>
+    <br /><br />
+    Points<br />
+    <input value="100" type="number" max="100" min="50" step="5" />
+    <br /><br />
+    Assignment Group<br />
+    <select>
+        <option>ASSIGNMENTS</option>
+        <option>QUIZZES</option>
+        <option>EXAMS</option>
+        <option>PROJECT</option>
+    </select>
+    <br /><br />
+    Display Grade as<br />
+    <select>
+        <option>Percentage</option>
+        <option>Marks</option>
+        <option>Grade</option>
+    </select>
+    <br /><br />
+    Submission Type<br />
+    <select>
+        <option>Online</option>
+        <option>In-Person</option>
+    </select>
+    <br /><br />
+    Online Entry Options<br />
+    <input type="checkbox" id="textEntry" /><label for="textEntry">Text Entry</label><br />
+    <input type="checkbox" checked />Website URL<br />
+    <label><input type="checkbox" />Media Recordings</label><br />
+    <label><input type="checkbox" />Student Annotations</label><br />
+    <input type="checkbox" />File Uploads<br />
+    <br />
+    Submission Attempts<br />
+    <select>
+        <option>Unlimited</option>
+        <option>One-Time</option>
+    </select>
+    <br /><br />
+    Plagiarism Review<br />
+    <select>
+        <option>None</option>
+        <option>Required</option>
+    </select>
+    <br /><br />
+    Group Assignment<br />
+    <input type="checkbox" id="groupAssignment" /><label for="groupAssignment">This is a group assignment</label><br />
+    <br />
+    Peer Reviews<br />
+    <input type="checkbox" id="peerReviews" /><label for="peerReviews">Require Peer Reviews</label><br />
+    <br />
+    Assign<br />
+    Assign to<br />
+    <input id="assign" value="Everyone" type="text" placeholder="Assign To" />
+    <br /><br />
+    Due<br />
+    <input type="date" value="2021-01-01" min="2020-01-09" max="2023-12-09" />
+    <br /><br />
+    Available from<br />
+    <input type="date" value="2021-01-01" min="2020-01-09" max="2023-12-09" />
+    <br /><br />
+    Until<br />
+    <input type="date" value="2021-01-01" min="2020-01-09" max="2023-12-09" />
+    <br /><br />
+    <button formaction="/Kanbas/Courses/Assignments/screen.html">Cancel</button>
+    <button formaction="/Kanbas/Courses/Assignments/screen.html">Save</button>
+</form>
