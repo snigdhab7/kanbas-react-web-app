@@ -1,0 +1,13 @@
+.list-group-item {
+    
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: rgb(67, 182, 92);
+}
+.list-group-item-heading {
+    
+    background-color: #ececec;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgba(0, 0, 0, 0.125);
+}

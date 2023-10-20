@@ -1,0 +1,9 @@
+:root {
+    --bs-breadcrumb-divider: '>'; /* Define the custom property at the root level */
+  }
+.breadcrumb::after {
+    content: var(--bs-breadcrumb-divider); /* Use the custom property */
+    color: #333; /* Example styling for the divider */
+    margin: 0 5px; /* Example margin */
+}
+    
