@@ -28,7 +28,7 @@ function Home() {
             </div>
             <hr />
     <div className="wd-flex-row-container">
-    <div class="col-md-8">
+    <div class="col-md-9">
         
     <ModuleList />
     </div>

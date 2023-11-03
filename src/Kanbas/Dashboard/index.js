@@ -4,22 +4,68 @@ import "./index.css"
 import "../../lib/bootstrap/bootstrap.css"
 import "../../lib/font-awesome/css/font-awesome.css"
 import "../../styles.css"
-function Dashboard() {
+import { React, useState } from "react"
 
-
-const courses = db.courses;
+function Dashboard(
+  { courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }
+) {
+ 
 return (
 <div class="wd-flex-grow-1">
 <div class="dashboard">
     <h3>Dashboard</h3>
     <hr/>
+    <h5>Course</h5>
+    <input value={course.title} className="form-control"
+onChange={(e) => setCourse({ ...course, title: e.target.value }) } />
+<input value={course.number} className="form-control"
+onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+<input value={course.startDate} className="form-control" type="date"
+onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+<input value={course.endDate} className="form-control" type="date"
+onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
+
+
+    <button onClick={addNewCourse} >
+Add
+</button>
+<button onClick={updateCourse} >
+Update
+</button>
+{/*     <div className="list-group">
+{courses.map((course) => (
+<Link key={course._id}
+to={`/Kanbas/Courses/${course._id}`}
+className="list-group-item">
+  <button
+onClick={(event) => {
+event.preventDefault();
+setCourse(course);
+}}>
+Edit
+</button>
+
+  <button
+onClick={(event) => {
+event.preventDefault();
+deleteCourse(course._id);
+}}>
+Delete
+</button>
+{course.title}
+</Link>
+))}
+</div> */}
+
     <h4>Published Courses (24)</h4>
     <hr/>
     
     <div class="d-flex flex-row flex-wrap">
     <ul  style={{ listStyle: 'none'}}>
   {courses.map((link) => (
-    <Link key={link._id} to={`/Kanbas/Courses/${link._id}`}>
+    <Link key={link._id}
+    to={`/Kanbas/Courses/${link._id}`}>
 
     <li key={link.id} style={{ display: 'inline-block' , marginRight: '20px'}}>
       <div className="col-md-3 mb-4">
@@ -36,6 +82,22 @@ return (
                 <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
               </a>
             </div>
+            <button
+onClick={(event) => {
+  console.log("edit")
+event.preventDefault();
+setCourse(link);
+}}>
+Edit
+</button>
+
+  <button
+onClick={(event) => {
+event.preventDefault();
+deleteCourse(link._id);
+}}>
+Delete
+</button>
           </div>
         </a>
       </div>

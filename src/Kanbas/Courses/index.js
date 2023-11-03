@@ -8,10 +8,10 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import "./index.css";
 
-function Courses() {
+function Courses({ courses }) {
 const { courseId } = useParams();
 const page = (useParams())['*'];
-const course = db.courses.find((course) => course._id === courseId);
+const course = courses.find((course) => course._id === courseId);
 document.addEventListener('DOMContentLoaded', function () {
     const element = document.getElementById('navbar-breadcrum');
     if (element) {

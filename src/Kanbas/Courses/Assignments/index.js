@@ -4,13 +4,32 @@ import db from "../../Database";
 import "../../../lib/bootstrap/bootstrap.css"
 import "../../../lib/font-awesome/css/font-awesome.css"
 import "../../../styles.css"
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+addAssignment,
+deleteAssignment,
+updateAssignment,
+setAssignment,
+} from "./assignmentsReducer";
+
 function Assignments() {
 const { courseId } = useParams();
-console.log("courseid",courseId)
-const assignments = db.assignments;
+const { assignmentId } = useParams();
+
+const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+const [assignment, setAssignment] = useState(assignments.find((assignment) => assignment._id === Number(assignmentId)));
+//const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+/* const courseAssignments = useSelector((state) => state.assignmentsReducer.assignment.filter(
+    (assignment) => assignment.course === courseId));
+const dispatch = useDispatch(); */
+const dispatch = useDispatch();
+console.log("courseid",assignments)
+//const assignments = db.assignments;
 const courseAssignments = assignments.filter(
 (assignment) => assignment.course === courseId);
 return (
+
 <>
     <br/><br/>
     
@@ -23,8 +42,10 @@ return (
                             </div>
                             <div>
                                 <button className="btn btn-light btn-outline-secondary" style={{marginRight: '5px'}}type="submit">+ Group</button>
-                                <button className="btn btn-light btn-outline-secondary wd-select-button"style={{marginRight: '5px'}} type="submit">+ Assignment</button>
-                                <button className="btn btn-light btn-outline-secondary" type="submit"><i className="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+                                <Link className="btn btn-light btn-outline-secondary wd-select-button" style={{ marginRight: '5px' }} >
+        + Assignment
+      </Link>
+                                     <button className="btn btn-light btn-outline-secondary" type="submit"><i className="fa fa-ellipsis-v" aria-hidden="true"></i></button>
                             </div>
                         </div>
                         </form>   
@@ -33,6 +54,15 @@ return (
                 <div className="wd-flex-grow-1 ">
 
             <ul className="list-group">
+            <li className="list-group-item">
+             <button className="assignment-button" onClick={() => dispatch(addAssignment({ ...assignment, course: courseId }))}>
+    Add</button>
+   <label>Assignment Name
+<input type="text" value={assignments.title} onChange={(e) => setAssignment({ ...assignment, title: e.target.value })} /></label>
+<label>Description <textarea value={assignments.description} onChange={(e) => setAssignment({ ...assignment, description: e.target.value })} /></label>
+
+
+</li>
                 <div className="list-group-item list-group-item-heading d-flex justify-content-between align-items-center" style={{ marginBottom: '30px', backgroundColor: ' #ececec'}}>
 
                     <div>
@@ -46,27 +76,33 @@ return (
                         <i className="fa fa-ellipsis-v wd-padding-20-right"  style={{marginRight: '5px'}} aria-hidden="true"></i>
                     </div>
     
-                </div>     
+                </div>    
+                 
                 {courseAssignments.map((assignment) => (
-                <Link
-key={assignment._id}
-to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                   
+                <div
 className="list-group-item d-flex justify-content-between align-items-center">
 
 <div >
+    
+    <button className="assignment-button" onClick={() => dispatch(deleteAssignment(assignment._id))}>Delete</button>
                         <i className="fa fa-ellipsis-v" style={{paddingLeft:'2px'}} aria-hidden="true"></i><i className="fa fa-ellipsis-v" aria-hidden="true"></i>
                         <i className="fa fa-pencil-square-o wd-icon-green" style={{paddingLeft:'5px'}}  aria-hidden="true"></i>
                     </div>
-                    <div>
+                     
+                <Link style={{textDecoration:'none', color: 'inherit'}}
+key={assignment._id}
+to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+>
                         <div className="fs-5">{assignment.title}</div>
                         <div className="fw-light">{assignment.description}</div>
                         <div className="fw-light">{assignment.dueDate}</div>
-                    </div>
+                    </Link>
                     <div>
                         <i className="fa fa-check-circle wd-icon-green wd-padding-20-right"  style={{marginRight: '5px'}} aria-hidden="true"></i>
                         <i className="fa fa-ellipsis-v wd-padding-20-right"  style={{marginRight: '5px'}} aria-hidden="true"></i>
                     </div>  
-</Link>
+</div>
                 ))}
 
 
