@@ -1,6 +1,11 @@
 import axios from "axios";
-const COURSES_URL = "http://localhost:4000/api/courses";
-const ASSIGNMENTS_URL = "http://localhost:4000/api/assignments";
+//const COURSES_URL = "https://kanbas-node-server-app-lhw3.onrender.com/api/courses";
+//const MODULES_URL = "https://kanbas-node-server-app-lhw3.onrender.com/api/modules";
+const API_BASE = process.env.REACT_APP_API_BASE;
+const ASSIGNMENTS_URL = `${API_BASE}/assignments`;
+const COURSES_URL = `${API_BASE}/courses`;
+//const COURSES_URL = "http://localhost:4000/api/courses";
+//const ASSIGNMENTS_URL = "http://localhost:4000/api/assignments";
 export const deleteAssignment = async (assignmentId) => {
   const response = await axios
     .delete(`${ASSIGNMENTS_URL}/${assignmentId}`);
