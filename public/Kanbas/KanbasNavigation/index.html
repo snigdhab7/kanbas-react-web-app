@@ -1,11 +1,16 @@
-<ul>
-    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-    <li><a href="#">Dashboard</a></li>
-    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-    <li><a href="#">Calendar</a></li>
-    <li><a href="#">Inbox</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Studio</a></li>
-    <li><a href="#">Commons</a></li>
-    <li><a href="#">Help</a></li>
-</ul>
+<html>
+<head>
+<link rel="stylesheet" href="/../../styles.css"/>
+<link rel="stylesheet" href="index.css"/>
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css"/>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module">
+        import KanbasNavigation from "./index.js";
+        const html= KanbasNavigation();
+        const root=document.getElementById("root");
+        root.innerHTML=html;
+    </script>
+</body>
+</html>

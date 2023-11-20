@@ -1,0 +1,20 @@
+.dashboard {
+    margin-left: 20px;
+}
+.course-card {
+    width: 250px; /* Width between 250 and 270 pixels */
+    margin-bottom: 30px; /* White spacing between courses */
+}
+@media (max-width: 768px) {
+    .course-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+ul {
+    list-style: none; /* Remove the default list styling */
+}
+
+li {
+    display: inline-block; /* Display list items on the same line */
+    margin-right: 20px; /* Add some space between list items */
+}

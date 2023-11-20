@@ -1,210 +1,769 @@
-<table>
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Settings/screen.html">Settings</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <button>Collapse All</button>
-            <button>View Porgress</button>
-            <select>
-                <option>Publish All</option>
-                <option>Publish all items and modules</option>
-                <option>UnPublish</option>
-            </select>
-            <button>+ Module</button>
-            <hr />
-            <ul>
-                <li>Week 0 - INTRO
-                    <ul>
-                        <li>LEARNING OBJECTIVES
-                            <ul>
-                                <li>Introduction to the coourse</li>
-                                <li>Learn what is Web Development</li>
-                                <li>Creating a Web Development Environment</li>
-                                <li>Creating a Web Application</li>
-                                <li>Getting started with the 1st Assignmnet</li>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css"/>
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css"/>
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.css"/>
+    <style>
+        .list-group-item {
+    
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: rgb(67, 182, 92);
+}
+.list-group-item-heading {
+    
+    background-color: #ececec;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgba(0, 0, 0, 0.125);
+}
+
+    </style>
+</head>
+<body>
+    <div class="d-block d-md-none">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h5 class="text-white h4">Collapsed content</h5>
+              <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <button class="navbar-toggler" type="button" onclick = "window.location.href='/Kanbas/Courses/CourseNavigation';">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+    </div>
+<div class="wd-flex-row-container">
+    <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+
+            <li>
+
+                <img src="https://d3ogvqw9m2inp7.cloudfront.net/assets/dynamic/assets/recruiters/images/1800897/logo.jpg" alt="Northeastern University Logo" class="neulogo">
+
+            </li>
+            <li><a href="/Kanbas/Account/Profile/screen.html">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>Account</a></li>
+            <li><a href="/Kanbas/Dashboard/screen.html">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+            <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+                <i class="fa fa-book" aria-hidden="true"></i>Courses</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#">
+                <i class="fa fa-inbox" aria-hidden="true"></i><br/>Inbox</a></li>
+            <li><a href="#">
+                <i class="fa fa-clock-o" aria-hidden="true"></i><br/>History</a></li>
+            <li><a href="#">
+                <i class="fa fa-desktop" aria-hidden="true"></i><br/>Studio</a></li>
+            <li><a href="#">
+                <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#">
+                <i class="fa fa-question-circle" aria-hidden="true"></i><br/>Help</a></li>
+        </ul>
+    </div>
+    <div>
+
+        <ul class="wd-course-navigation d-none d-md-block">
+
+            <li ><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+            <li class="wd-active"><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li ><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="/Kanbas/Settings/screen.html">Settings</a></li>
+        </ul>
+    </div>
+    <div class="wd-flex-grow-1">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/Kanbas/Courses/Home/screen.html" style="text-decoration:none;"><h5><span style="color:red;">CS 5610.11550.202410</span></h5></a></li>
+                <li class="breadcrumb-item active" aria-current="page">Modules</li>
+            </ol>
+        </nav>
+        <hr/>
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-secondary float-end">Collapse All</button>
+                        <button class="btn btn-secondary float-end">View Progress</button>
+                        <div class="dropdown float-end">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="publishDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Publish All
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="publishDropdown">
+                                <li><a class="dropdown-item" href="#">Publish all items and modules</a></li>
+                                <li><a class="dropdown-item" href="#">UnPublish</a></li>
                             </ul>
+                        </div>
+                        <button class="btn btn-danger float-end">+ Module</button>
+                    </div>
+                    <hr />
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-heading d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa fa-ellipsis-v" style="padding-right: 1px" aria-hidden="true"></i><i class="fa fa-ellipsis-v" style="padding-right: 10px" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <b>Week 0 - INTRO</b>
+                            </div>
+                            <div>
+                                <i class="fa fa-check-circle wd-icon-green" aria-hidden="true"></i>
+                                <i class="fa fa-plus wd-padding-20-right" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                            </div>        
                         </li>
-                        <li>READING
-                            <ul>
-                                <li>Full-Stack Developer - Chapter 1 - Introduction</li>
-                                <li>Full-Stack Developer - Chapter 2 - Creating User</li>
-                                <li>Interfaces with HTML</li>
-                            </ul>
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">LEARNING OBJECTIVES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Introduction to the course</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Learn what is Web Development</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Creating a development environment</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Creating a Web Application</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Getting started with the 1st assignment</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                        
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">READING</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 1 - Introduction</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                    
+                        
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">SLIDES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Full Stack Developer - Chapter 1 - Introduction
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Creating an HTTP server with Node.js Links to an external site
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Creating a react Application Links to an external site
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                   
+                        
+                        <li class="list-group-item list-group-item-heading d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa fa-ellipsis-v" style="padding-right: 1px" aria-hidden="true"></i><i class="fa fa-ellipsis-v" style="padding-right: 10px" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <b>Week 1 - HTML</b>
+                            </div>
+                            <div>
+                                <i class="fa fa-check-circle wd-icon-green" aria-hidden="true"></i>
+                                <i class="fa fa-plus wd-padding-20-right" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                            </div>        
                         </li>
-                        <li>SLIDES
-                            <ul>
-                                <li><a href="#">Introduction to Web Development Links to an external site.</a></li>
-                                <li><a href="#">Creating a HTTP server with Node.js Links to an external site.</a></li>
-                                <li><a href="#">Creating a React Application Links to an external site.</a></li>
-                            </ul>
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">LEARNING OBJECTIVES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Learn how to create user interfaces with HTML</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Keep working on assignment 1</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Deploy the assignment to Netlify</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                    
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">READING</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 1 - Introduction</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                    
+                        
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">SLIDES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Introduction to HTML and the DOM
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Formatting Web content with Headings and Paragraphs Links to an external site.
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Formatting content with Lists and Tables
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                   
+                        
+                        <li class="list-group-item list-group-item-heading d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa fa-ellipsis-v" style="padding-right: 1px" aria-hidden="true"></i><i class="fa fa-ellipsis-v" style="padding-right: 10px" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <b>Week 2 - CSS</b>
+                            </div>
+                            <div>
+                                <i class="fa fa-check-circle wd-icon-green" aria-hidden="true"></i>
+                                <i class="fa fa-plus wd-padding-20-right" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                            </div>        
                         </li>
-                        <li>
-                            EVALUATIONS<ul>
-                                <li>A1 - ENV - HTML</li>
-                            </ul>
+                       
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">LEARNING OBJECTIVES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Introduction to CSS</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Selectors by tag ID, classes, and document structure</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Styling color and background color</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Styling dimensions and positions</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">The box model - styling margins, borders, and paddings</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                                                      
+
+                  
+                       
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">READING</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 3 - Styling User Interfaces With Cascading Style Sheets</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 3 - Styling User Interfaces With Cascading Style Sheets</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                    
+                        
+                       
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">SLIDES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Introduction to Cascading Style Sheets
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Styling with Colors
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        The Box Model
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                   
+                   
+                        <li class="list-group-item list-group-item-heading d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa fa-ellipsis-v" style="padding-right: 1px" aria-hidden="true"></i><i class="fa fa-ellipsis-v" style="padding-right: 10px" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <b>Week 3 - CSS Libraries</b>
+                            </div>
+                            <div>
+                                <i class="fa fa-check-circle wd-icon-green" aria-hidden="true"></i>
+                                <i class="fa fa-plus wd-padding-20-right" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                            </div>        
                         </li>
-                        <li>
-                            YOUTUBE<ul>
-                                <li><a href="#">Introduction to Web Development - Like and Subscribe</a></li>
-                            </ul>
-                        </li>
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">LEARNING OBJECTIVES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">CSS Libraries: Bootstrap, Tailwind</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Float and grid systems</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Media queries and responsive design</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Laying out content with Flex</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Final Project Requirements</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                                                 
+
+                       
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">READING</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 4 - Styling Web Pages With The Bootstrap CSS Library</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <span class="ms-5">Full Stack Developer - Chapter 3 - Styling User Interfaces With Cascading Style Sheets</span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                  
+                        
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-pencil-square-o wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i> -->
+                                    <span class="fs-5 ms-2">SLIDES</span>                                        
+                                </div>                                                                        
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Introduction to Bootstrap
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Grid System
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                <div >
+                                    <i class="fa fa-ellipsis-v" style="padding-right: 2px;" aria-hidden="true"></i><i class="fa fa-ellipsis-v" aria-hidden="true"></i>                                            
+                                    <i class="fa fa-link wd-icon-green" style="padding-left: 5px;"  aria-hidden="true"></i>
+                                    <span class="ms-2 wd-fg-kanbasred">
+                                        Bootstrap Navigation
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    </span>           
+                                </div>                                                                                                          
+                                <div>
+                                    <i class="fa fa-check-circle wd-icon-green wd-padding-20-right" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v wd-padding-20-right" aria-hidden="true"></i>
+                                </div>  
+                            </a>                                     
                     </ul>
-                </li>
-                <li>Week 1 - HTML
-                    <ul>
-                        <li>LEARNING OBJECTIVES
-                            <ul>
-                                <li>Learn how to create user interfaces with HTML</li>
-                                <li>Keep working on Assignment 1</li>
-                                <li>Deploy the Assignmnet on Netlify</li>
-                            </ul>
-                        </li>
-                        <li>READING
-                            <ul>
-                                <li>Full-Stack Developer - Chapter 1 - Introduction</li>
-                                <li>Full-Stack Developer - Chapter 2 - Creating User</li>
-                                <li>Interfaces with HTML</li>
-                            </ul>
-                        </li>
-                        <li>SLIDES
-                            <ul>
-                                <li><a href="#">Introduction to HTML and the DOM.</a></li>
-                                <li><a href="#">Formatting web content with headings and paragraphs.</a></li>
-                                <li><a href="#">Formatting content with Lists and Tables.</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            EVALUATIONS<ul>
-                                <li>A1 - ENV - HTML</li>
-                                <li>Project</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Project<ul>
-                                <li>Project Requirements</li>
-                            </ul>
-                        </li>
-                        <li>
-                            YOUTUBE<ul>
-                                <li><a href="#">Getting Started with Assignment 1 - Like and Subscribe</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Week 2 - CSS
-                    <ul>
-                        <li>LEARNING OBJECTIVES
-                            <ul>
-                                <li>Introduction to CSS</li>
-                                <li>Selectors by tag ID, classes, and document structure</li>
-                                <li>STyling color and background color</li>
-                            </ul>
-                        </li>
-                        <li>READING
-                            <ul>
-                                <li>Full-Stack Developer - Chapter 3 - Styling User Interfaces with Cascading Style
-                                    Sheets</li>
-                            </ul>
-                        </li>
-                        <li>SLIDES
-                            <ul>
-                                <li><a href="#">Introduction to Cascading Style Sheets.</a></li>
-                                <li><a href="#">Styling with colors</a></li>
-                                <li><a href="#">The Box Model</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            EVALUATIONS<ul>
-                                <li>A2 - CSS + BOOTSTRAP</li>
-                                <li>Q1 - HTML</li>
-                            </ul>
-                        </li>
-                        <li>
-                            REFERENCES<ul>
-                                <li>MDN Learn CSS</li>
-                                <li>MDN CSS guidelines</li>
-                                <li>MDN The Box Model</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Week 3 - CSS Libraries
-                    <ul>
-                        <li>LEARNING OBJECTIVES
-                            <ul>
-                                <li>CSS Libraries: Bootstrap, Tailwind</li>
-                                <li>Float and grid systems</li>
-                                <li>Media Queries and responsive design</li>
-                            </ul>
-                        </li>
-                        <li>READING
-                            <ul>
-                                <li>Full-Stack Developer - Chapter 4 - Styling Web Pages with Bootstrap CSS Library</li>
-                            </ul>
-                        </li>
-                        <li>SLIDES
-                            <ul>
-                                <li><a href="#">Introduction to Bootstrap.</a></li>
-                                <li><a href="#">Grid Systems</a></li>
-                                <li><a href="#">Bootstrap navigation</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            VIDEO -Please Like and Subscribe my videos on X<ul>
-                                <li><a href="#">Introduction to Bootstrap Video Lecture</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            EVALUATIONS<ul>
-                                <li>A2 - CSS + BOOTSTRAP</li>
-                                <li>Project</li>
-                            </ul>
-                        </li>
-                        <li>
-                            PROJECT<ul>
-                                <li>Create Project Teams</li>
-                                <li>One of the team members should create a React.js project where the team will
-                                    implement the final project</li>
-                                <li>Push the code to GitHub repository and invite other team members as collaborators
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </td>
-    </tr>
-</table>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+</body></html>
