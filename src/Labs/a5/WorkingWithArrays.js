@@ -11,6 +11,7 @@ function WorkingWithArrays() {
         });
     const API = "http://localhost:4000/a5/todos";
     const [todos, setTodos] = useState([]);
+    const [errorMessage, setErrorMessage] = useState(null);
   const fetchTodos = async () => {
     const response = await axios.get(API);
     setTodos(response.data);
@@ -38,27 +39,30 @@ function WorkingWithArrays() {
     const response = await axios.post(API, todo);
     setTodos([...todos, response.data]);
   };
-  const [errorMessage, setErrorMessage] = useState(null);
+  
   const deleteTodo = async (todo) => {
     try{
     const response = await axios.delete(`${API}/${todo.id}`);
     setTodos(todos.filter((t) => t.id !== todo.id));
 } catch (error) {
-    console.log(error);
-    setErrorMessage(error.response.data.message);
+    console.log(error.message);
+    setErrorMessage(error.message);
   }
   };
 
   const updateTodo = async () => {
     try {
+      console.log("11",todo.id)
     const response = await axios.put(
       `${API}/${todo.id}`, todo);
+      console.log("22",todo.id)
     setTodos(todos.map((t) => (
       t.id === todo.id ? todo : t)));
     setTodo({});
 } catch (error) {
-    console.log(error);
+    console.log("jkj",error);
     setErrorMessage(error.response.data.message);
+    console.log("err",errorMessage)
   }
 
   };
@@ -97,17 +101,61 @@ Get Completed Todos
 className="btn btn-primary me-2">
 Create Todo
 </a>
-<input
-value={todo.id}
-onChange={(e) => setTodo({
-...todo, id: e.target.value })}
-className="form-control mb-2"
-type="number"
-/>
+<br/><br/>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+  <label style={{ marginRight: '5px' }}>ID:</label>
+  <input
+    value={todo.id}
+    onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+    className="form-control mb-2"
+    type="number"
+  />
+</div>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+  <label style={{ marginRight: '5px' }}>Title:</label>
+  <input
+    value={todo.title}
+    onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+    className="form-control mb-2"
+    type="text"
+  />
+</div>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+  <label style={{ marginRight: '5px' }}>Description:</label>
+  <input
+    value={todo.description}
+    onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+    className="form-control mb-2"
+    type="text"
+  />
+</div>
+
+
+
+
 <h3>Deleting from an Array</h3>
 <a href={`${API}/${todo.id}/delete`}
 className="btn btn-primary me-2">
 Delete Todo with ID = {todo.id}
+</a>
+
+<h3>Update Description</h3>
+
+<a
+href={`${API}/${todo.id}/description/${todo.description}`}
+className="btn btn-primary me-2" >
+Update Description to{todo.description}
+</a>
+
+
+
+
+
+<h3>Updating an Item in an Array</h3>
+<a
+href={`${API}/${todo.id}/title/${todo.title}`}
+className="btn btn-primary me-2" >
+Update Title to {todo.title}
 </a>
 
 <input
@@ -121,43 +169,13 @@ href={`${API}/${todo.id}/completed/${todo.completed}`}
 className="btn btn-primary me-2" style={{marginLeft:'10px'}}>
 Update Completed{todo.completed}
 </a>
-<h3>Update Description</h3>
-<input
-value={todo.description}
-onChange={(e) => setTodo({
-...todo, description: e.target.value })}
-className="form-control mb-2"
-type="text"
-/>
-<a
-href={`${API}/${todo.id}/description/${todo.description}`}
-className="btn btn-primary me-2" >
-Update Description to{todo.description}
-</a>
-
-
-
-
-<input
-value={todo.title}
-onChange={(e) => setTodo({
-...todo, title: e.target.value })}
-className="form-control mb-2"
-type="text"
-/>
-
-
-<h3>Updating an Item in an Array</h3>
-<a
-href={`${API}/${todo.id}/title/${todo.title}`}
-className="btn btn-primary me-2" >
-Update Title to {todo.title}
-</a>
+<br/><br/><br/>
 
 <button onClick={updateTitle}
               className="btn btn-success mb-2 w-100">
         Update Title
       </button>
+      
 
 <button onClick={createTodo}
               className="btn btn-primary mb-2 w-100">
@@ -188,7 +206,7 @@ Update Title to {todo.title}
       </button>
       
       <button onClick={updateTodo}>
-        Update Todo
+        Update Todo for {todo.id}
       </button>
       {errorMessage && (
         <div className="alert alert-danger mb-2 mt-2">

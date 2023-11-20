@@ -59,6 +59,10 @@ function WorkingWithObjects() {
         className="btn btn-primary me-2">
         Get Score
       </a><br /><br />
+      <a href="http://localhost:4000/a5/assignment/completed"
+className="btn btn-primary me-2" >
+Get Completed
+</a> <br/><br/>
       <a
         href={`${URL}/score/${assignment.score}`}
         className="btn btn-primary me-2 float-end"
@@ -73,6 +77,17 @@ function WorkingWithObjects() {
         value={assignment.score}
         className="form-control mb-2 w-75"
         type="text" />
+        <input
+onChange={(e) => setAssignment({
+...assignment, completed: e.target.checked })}
+checked={assignment.completed}
+className="form-check-input mb-2"
+type="checkbox" style={{marginLeft:'10px'}}
+/><a
+href={`${URL}/completed/${assignment.completed}`}
+className="btn btn-primary me-2" style={{marginLeft:'10px'}}>
+Update Completed
+</a>
     </div>
   );
 }
