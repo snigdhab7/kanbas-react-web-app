@@ -1,6 +1,7 @@
 import * as client from "./client";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 function Signin() {
   const [credentials, setCredentials] = useState({ username: "", password: "" });
   const navigate = useNavigate();
@@ -9,12 +10,13 @@ function Signin() {
     try {
       const response = await client.signin(credentials);
   
-      if (response === null) {
-        // Handle the case when no data is available (e.g., display a specific message)
+      if (!response) {
         setError("No data available for the provided credentials.");
       } else {
-        // Assume the signin was successful, navigate or perform other actions
-        navigate("/Kanbas/account");
+        
+        const userId = String(response._id);
+  navigate(`/Kanbas/account?id=${userId}`)
+      
       }
     } catch (error) {
       setError("Unable to sign in with the provided credentials. Please try again.");
