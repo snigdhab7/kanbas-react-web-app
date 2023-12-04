@@ -32,224 +32,224 @@
     },
 
     {
-        "_id": "A101",
+        "_id": "A107",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A108",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A109",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A110",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A111",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A112",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_3", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A113",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A114",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A115",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A116",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A117",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A118",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_4", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A119",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A120",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A121",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A122",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A123",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A124",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_5", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A125",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A126",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A127",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A128",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A129",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A130",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_6", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A131",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A132",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A133",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A134",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A135",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A136",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_7", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A137",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A138",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A139",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A140",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A141",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A142",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_8", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
 
       {
-        "_id": "A101",
+        "_id": "A143",
           "title": "A1 SETUP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A102",
+      {"_id": "A144",
           "title": "A2 HTML",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A103",
+      {"_id": "A145",
           "title": "A3 CSS",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A104",
+      {"_id": "A146",
           "title": "A4 BOOTSTRAP",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A105",
+      {"_id": "A147",
           "title": "A5 JAVASCRIPT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"
       },
-      {"_id": "A106",
+      {"_id": "A148",
           "title": "A6 REACT",
           "description": "Week 0 - SETUP -Week starting on Monday September 5th (2020-01-09) Module",
           "dueDate": "2020-01-09", "course": "202410_9", "availableFromDate": "2020-01-09", "availableUntilDate":"2023-01-09"

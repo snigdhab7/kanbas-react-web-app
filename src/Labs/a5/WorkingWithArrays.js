@@ -10,6 +10,7 @@ function WorkingWithArrays() {
         completed: false,
         });
     const API = "https://kanbas-node-server-app-lhw3.onrender.com/a5/todos";
+    //const API = "http://localhost:4000/a5/todos";
     const [todos, setTodos] = useState([]);
     const [errorMessage, setErrorMessage] = useState(null);
   const fetchTodos = async () => {
@@ -66,7 +67,16 @@ function WorkingWithArrays() {
   }
 
   };
-
+  const updateCompleted = async () => {
+    const updatedTodo = { ...todo, completed: !todo.completed };
+    const response = await axios.put(
+        `${API}/${todo.id}/completed/${updatedTodo.completed}`,
+        updatedTodo
+    );
+    fetchTodos();
+    setTodos(todos.map((t) => (t.id === todo.id ? response.data : t)));
+    setTodo({});
+};
   
   useEffect(() => {
     fetchTodos();
@@ -169,6 +179,19 @@ href={`${API}/${todo.id}/completed/${todo.completed}`}
 className="btn btn-primary me-2" style={{marginLeft:'10px'}}>
 Update Completed{todo.completed}
 </a>
+<input
+                            checked={todo.completed}
+                            type="checkbox"
+                            onChange={(e) =>
+                                setTodo({
+                                    ...todo,
+                                    completed: e.target.checked,
+                                })
+                            }
+                        />
+<button onClick={updateCompleted} className="btn btn-success mb-2 w-100">
+                Update completed
+            </button>
 <br/><br/><br/>
 
 <button onClick={updateTitle}
