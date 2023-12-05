@@ -35,10 +35,14 @@ return (
 
     {links.map((link,index) => (
         
-         <Link
+   /*       <Link
         key={index}
         to={`/Kanbas/${link.name}`}
-        > 
+        >  */
+        <Link
+  key={index}
+  to={link.name === "Account" ? `/Kanbas/account/:id` : `/Kanbas/${link.name}`}
+>
 
 
 
