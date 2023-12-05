@@ -1,19 +1,21 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { useNavigate , useParams} from "react-router-dom";
-import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Signin from "./signin";
 import Signup from "./signup";
-function Account({user}) {
-    //const { id } = useParams();
-    const location = useLocation();
+import { useLocation } from 'react-router-dom';
+
+//const [userId,setUserId] = useState("");
+function Account() {
+   // const { id } = useParams();
+   const location = useLocation();
   const params = new URLSearchParams(location.search);
-    const id = user? user: params.get('id');
+  const id = params.get('id');
   const [account, setAccount] = useState(null);
   const navigate = useNavigate();
   const [successMessage, setSuccessMessage] = useState('');
-  console.log("test",useParams())
+  console.log("test")
   const findUserById = async (id) => {
     const user = await client.findUserById(id);
     setAccount(user);

@@ -15,7 +15,7 @@ import Signup from "./users/signup.js";
 import * as client from "./users/client.js";
 
 function Kanbas() {
-  const [userId,setUserId] = useState("");
+ /*  const [userId,setUserId] = useState("");
   const navigate = useNavigate();
   const signin = async (credentials) => {
       try {
@@ -34,7 +34,7 @@ function Kanbas() {
       } catch (error) {
        // setError("Unable to sign in with the provided credentials. Please try again.");
       }
-    };
+    }; */
     const [courses, setCourses] = useState([]);
     const URL="https://kanbas-node-server-app-q5sx.onrender.com/api/courses";
     //const URL = "https://kanbas-node-server-app-lhw3.onrender.com/api/courses";
@@ -97,11 +97,11 @@ const deleteCourse = async (course) => {
     <h1>Courses</h1> */}
     <Routes>
 <Route path="/" element={<Navigate to="Dashboard" />} />
-<Route path="/signin" element={<Signin  signin={signin}/>} /> 
+<Route path="/signin" element={<Signin  />} /> 
 <Route path="/signup" element={<Signup />} /> 
 <Route path="/admin/users" element={<UserTable />} />
-<Route path="/account" element={<Account/>} />
-<Route path="/account/:id" element={<Account account={userId} />} />
+<Route path="/account" element={<Account />} />
+<Route path="/account/:id" element={<Account  />} />
 {/* <Route path="Account" element={<Account/>} /> */}
 <Route path="Dashboard" element={
     <Dashboard
