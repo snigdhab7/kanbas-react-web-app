@@ -15,7 +15,8 @@ function Signin() {
       } else {
         
         const userId = String(response._id);
-  navigate(`/Kanbas/account?id=${userId}`)
+  //navigate(`/Kanbas/account?id=${userId}`)
+  navigate(`/Kanbas/account`)
       
       }
     } catch (error) {
