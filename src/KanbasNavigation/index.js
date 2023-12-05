@@ -1,9 +1,13 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../lib/bootstrap/bootstrap.css"
 import "../lib/font-awesome/css/font-awesome.css"
 import "../styles.css"
 import "./index.css"
+
+
 function KanbasNavigation() {
+   
+    
         const links = [
         {name:"Account", icon:"fa fa-user-circle-o" },
         {name:"Dashboard",icon:"fa fa-tachometer" },
@@ -30,11 +34,12 @@ return (
 
 
     {links.map((link,index) => (
-        <Link
+        
+         <Link
         key={index}
         to={`/Kanbas/${link.name}`}
-        >
-        
+        > 
+
 
 
         <li style={{ display: 'inline-block' , marginRight: '20px'}} className={` ${pathname.includes(link.name) ? "wd-active" : ""}`}><a href={`/Kanbas/${link}`}>

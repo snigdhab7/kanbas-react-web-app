@@ -1,5 +1,5 @@
 import KanbasNavigation from "../KanbasNavigation/index.js";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Dashboard from "./Dashboard/index.js";
 import Courses from "./Courses/index.js";
 // import Account from "./Account/index.js";
@@ -12,8 +12,29 @@ import Signin from "./users/signin.js";
 import Account from "./users/account.js";
 import UserTable from "./users/table.js";
 import Signup from "./users/signup.js";
+import * as client from "./users/client.js";
 
 function Kanbas() {
+  const [userId,setUserId] = useState("");
+  const navigate = useNavigate();
+  const signin = async (credentials) => {
+      try {
+        const response = await client.signin(credentials);
+        setUserId(response._id)
+    
+        if (!response) {
+        //  setError("No data available for the provided credentials.");
+        } else {
+          
+          const userId = String(response._id);
+    navigate(`/Kanbas/account?id=${userId}`)
+    //navigate(`/Kanbas/account`)
+        
+        }
+      } catch (error) {
+       // setError("Unable to sign in with the provided credentials. Please try again.");
+      }
+    };
     const [courses, setCourses] = useState([]);
     const URL="https://kanbas-node-server-app-q5sx.onrender.com/api/courses";
     //const URL = "https://kanbas-node-server-app-lhw3.onrender.com/api/courses";
@@ -76,7 +97,7 @@ const deleteCourse = async (course) => {
     <h1>Courses</h1> */}
     <Routes>
 <Route path="/" element={<Navigate to="Dashboard" />} />
-<Route path="/signin" element={<Signin />} /> 
+<Route path="/signin" element={<Signin  signin={signin}/>} /> 
 <Route path="/signup" element={<Signup />} /> 
 <Route path="/admin/users" element={<UserTable />} />
 <Route path="/account" element={<Account />} />
