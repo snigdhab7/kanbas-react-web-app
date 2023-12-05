@@ -100,7 +100,7 @@ const deleteCourse = async (course) => {
 <Route path="/signin" element={<Signin  />} /> 
 <Route path="/signup" element={<Signup />} /> 
 <Route path="/admin/users" element={<UserTable />} />
-<Route path="/account/:id" element={<Account />} />
+<Route path="/account/" element={<Account />} />
 <Route path="/account/:id" element={<Account  />} />
 {/* <Route path="Account" element={<Account/>} /> */}
 <Route path="Dashboard" element={
