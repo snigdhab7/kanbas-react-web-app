@@ -5,11 +5,11 @@ import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Signin from "./signin";
 import Signup from "./signup";
-function Account() {
+function Account({user}) {
     //const { id } = useParams();
     const location = useLocation();
   const params = new URLSearchParams(location.search);
-    const id = params.get('id');
+    const id = user? user: params.get('id');
   const [account, setAccount] = useState(null);
   const navigate = useNavigate();
   const [successMessage, setSuccessMessage] = useState('');
